@@ -1,4 +1,3 @@
-package com.company;
 import com.sun.tools.doclets.internal.toolkit.util.DocFinder;
 
 import java.util.*;
@@ -19,7 +18,7 @@ public class Glaeser_Program1 {
         int n = keybd.nextInt(); //max length of key
         System.out.print("Original: ");
         for(char c : ciphertext)
-        System.out.print(c);
+            System.out.print(c);
         System.out.println();
 
         double[] icavgs = new double[n];
@@ -108,32 +107,32 @@ public class Glaeser_Program1 {
 
                 System.out.println(curr);
 
-                    System.out.println("Accept replacement? y/n");
-                    try {
-                        if(keybd.next().equalsIgnoreCase("y")) {
-                            ciphertext = curr.toCharArray();
-                            //break;
-                        }
-                        //if no, it'll just loop through choosing an 'e' again
-                        else {
-                            System.out.println("Want to return to the previous sequence? y/n");
-                            while(true) {
-                                try {
-                                    if (keybd.next().equalsIgnoreCase("y")) {
-                                        //System.out.println("Enter sequence number (1-" + (k+1) + "): ");
-                                                k--;
-                                                    break;
-                                        }
+                System.out.println("Accept replacement? y/n");
+                try {
+                    if(keybd.next().equalsIgnoreCase("y")) {
+                        ciphertext = curr.toCharArray();
+                        //break;
+                    }
+                    //if no, it'll just loop through choosing an 'e' again
+                    else {
+                        System.out.println("Want to return to the previous sequence? y/n");
+                        while(true) {
+                            try {
+                                if (keybd.next().equalsIgnoreCase("y")) {
+                                    //System.out.println("Enter sequence number (1-" + (k+1) + "): ");
+                                    k--;
                                     break;
                                 }
-                                catch (InputMismatchException e) {
-                                    System.out.println("enter y or n");
-                                }
+                                break;
+                            }
+                            catch (InputMismatchException e) {
+                                System.out.println("enter y or n");
                             }
                         }
-                    } catch (InputMismatchException e) {
-                        System.out.println("enter y or n");
                     }
+                } catch (InputMismatchException e) {
+                    System.out.println("enter y or n");
+                }
 
             }
             catch(InputMismatchException e)
@@ -197,7 +196,7 @@ public class Glaeser_Program1 {
     {
         System.out.println("\nperiod \t\t avg I.C.");
         System.out.println("-----------------------------------");
-        for(int i = 0; i < d.length; i++)
+        for(int i = 1; i < d.length; i++) //don't print I.C. for period 1
         {
             System.out.println(i+1 + ":\t\t" + d[i]);
         }
