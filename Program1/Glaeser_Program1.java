@@ -2,7 +2,8 @@
  * Cryptography (CSCE 557) – Spring 2016
  * Programming Assignment #1: Vigenère cipher
  * Author/copyright: Noemi Glaeser
- * Last modified: 19 February 2016
+ * Created: 9 February 2016
+ * Last modified: 26 February 2016
  *
  * This program analyzes a ciphertext, assuming it is encrypted using a Vigenère,
  * in two steps:
