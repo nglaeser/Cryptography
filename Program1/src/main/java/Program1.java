@@ -45,7 +45,7 @@
 
 import java.util.*;
 
-public class Glaeser_Program1 {
+public class Program1 {
     public static final String ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static void main(String[] args)
     {
